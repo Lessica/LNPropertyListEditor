@@ -19,12 +19,14 @@
 @property (nonatomic, strong) IBOutlet NSLayoutConstraint *buttonsConstraint;
 
 @property (nonatomic, readonly) BOOL showsControlButtons;
-- (void)setShowsControlButtons:(BOOL)showsControlButtons addButtonEnabled:(BOOL)addButtonEnabled deleteButtonEnabled:(BOOL)deleteButtonEnabled;
+- (void)setShowsControlButtons:(BOOL)showsControlButtons
+              addButtonEnabled:(BOOL)addButtonEnabled
+           deleteButtonEnabled:(BOOL)deleteButtonEnabled;
 
-- (void)setControlWithString:(NSString*)str setToolTip:(BOOL)setToolTip;
+- (void)setControlWithString:(NSString *)str;
 - (void)setControlWithBoolean:(BOOL)boolean;
-- (void)setControlWithDate:(NSDate*)date;
-- (void)setControlEditable:(BOOL)editable;
+- (void)setControlWithDate:(NSDate *)date;
+- (void)setControlEditable:(BOOL)editable withAppropriateStyle:(BOOL)appropriateStyle;
 - (void)flashError;
 
 @end

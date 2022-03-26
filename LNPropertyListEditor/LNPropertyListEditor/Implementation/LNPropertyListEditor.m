@@ -10,7 +10,6 @@
 #import "LNPropertyListNode-Private.h"
 #import "LNPropertyListRowView.h"
 #import "LNPropertyListCellView.h"
-#import "LNPropertyListDataEditorPanel.h"
 
 @import ObjectiveC;
 
@@ -1031,27 +1030,7 @@
 
 - (void)_editDataNodeIfPossible:(LNPropertyListNode*)node
 {
-	BOOL editable = YES;
-	if(_flags.delegate_canEditValueOfNode)
-	{
-		editable = [self.delegate propertyListEditor:self canEditValueOfNode:node];
-	}
-	
-	if(editable == NO)
-	{
-		return;
-	}
-	
-	LNPropertyListDataEditorPanel* dataEditor = [LNPropertyListDataEditorPanel new];
-	dataEditor.data = node.value;
-	[dataEditor beginSheetModalForWindow:self.window completionHandler:^(NSModalResponse result) {
-		if(result == NSModalResponseCancel)
-		{
-			return;
-		}
-		
-		[self _updateValue:dataEditor.data ofNode:node reloadItem:YES];
-	}];
+    return;
 }
 
 - (void)_outlineViewDoubleClick
@@ -1097,6 +1076,7 @@
 	NSString* value;
 	BOOL editable = NO;
 	BOOL isData = NO;
+    BOOL usesAppropriateStyle = NO;
 	
 	if(tableColumn == _keyColumn)
 	{
@@ -1168,6 +1148,7 @@
 		}
 		
 		isData = type == LNPropertyListNodeTypeData;
+        usesAppropriateStyle = type == LNPropertyListNodeTypeData || type == LNPropertyListNodeTypeArray || type == LNPropertyListNodeTypeDictionary;
 	}
 	
 	cellView = [outlineView makeViewWithIdentifier:identifier owner:self];
@@ -1181,10 +1162,10 @@
 	}
 	else
 	{
-		[cellView setControlWithString:value setToolTip:(tableColumn == _keyColumn || (tableColumn == _valueColumn && editable))];
+		[cellView setControlWithString:value];
 	}
 	
-	[cellView setControlEditable:editable && !isData];
+	[cellView setControlEditable:editable && !isData withAppropriateStyle:usesAppropriateStyle];
 	
 	cellView.textField.delegate = self;
 	

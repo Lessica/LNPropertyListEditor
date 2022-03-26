@@ -42,7 +42,7 @@
 	}
 }
 
-- (void)setControlWithString:(NSString*)str setToolTip:(BOOL)setToolTip
+- (void)setControlWithString:(NSString *)str
 {
 	if(self.typeButton)
 	{
@@ -52,11 +52,6 @@
 	{
 		self.textField.stringValue = str;
 	}
-	
-	if(setToolTip)
-	{
-		self.toolTip = str;
-	}
 }
 
 - (void)setControlWithBoolean:(BOOL)boolean
@@ -64,7 +59,7 @@
 	[self.typeButton selectItemAtIndex:(NSInteger)boolean];
 }
 
-- (void)setControlWithDate:(NSDate*)date
+- (void)setControlWithDate:(NSDate *)date
 {
 	_datePicker.dateValue = date;
 }
@@ -101,13 +96,13 @@
 	self.minusButton.enabled = deleteButtonEnabled;
 }
 
-- (void)setControlEditable:(BOOL)editable
+- (void)setControlEditable:(BOOL)editable withAppropriateStyle:(BOOL)appropriateStyle
 {
 	self.textField.selectable = self.textField.editable = editable;
 	_typeButton.enabled = editable;
 	_datePicker.enabled = editable;
 	
-	self.textField.textColor = NSColor.labelColor;
+    self.textField.textColor = !appropriateStyle ? NSColor.labelColor : (editable ? NSColor.labelColor : NSColor.disabledControlTextColor);
 }
 
 @end

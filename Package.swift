@@ -12,32 +12,11 @@ let package = Package(
 			name: "LNPropertyListEditor",
 			type: .dynamic,
 			targets: ["LNPropertyListEditor"]),
-		.library(
-			name: "LNPropertyListEditor-Static",
-			type: .static,
-			targets: ["LNPropertyListEditor"]),
 	],
 	dependencies: [],
 	targets: [
 		.target(
-			name: "LNPropertyListEditor_HexFiend",
-			dependencies: [],
-			path: "HexFiendFramework",
-			exclude: [
-				
-			],
-			resources: [],
-			publicHeadersPath: "include",
-			cSettings: [
-				.define("HF_NO_PRIVILEGED_FILE_OPERATIONS", to: "1"),
-				.headerSearchPath("include"),
-				.headerSearchPath("src"),
-			]),
-		.target(
 			name: "LNPropertyListEditor",
-			dependencies: [
-				"LNPropertyListEditor_HexFiend"
-			],
 			path: "LNPropertyListEditor",
 			exclude: [
 				"LNPropertyListEditor/Info.plist"
