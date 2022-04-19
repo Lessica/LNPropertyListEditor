@@ -14,7 +14,6 @@
 		391FF0342084270400005D0F /* LNPropertyListOutlineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 391FF0322084270400005D0F /* LNPropertyListOutlineView.m */; };
 		3925913A263C52B100AF78D3 /* LNPropertyListCellTextField.h in Headers */ = {isa = PBXBuildFile; fileRef = 39259138263C52B100AF78D3 /* LNPropertyListCellTextField.h */; };
 		3925913B263C52B100AF78D3 /* LNPropertyListCellTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 39259139263C52B100AF78D3 /* LNPropertyListCellTextField.m */; };
-		393E1872207F61C2002E6136 /* LNPropertyListEditorOutline.xib in Resources */ = {isa = PBXBuildFile; fileRef = 393E1871207F61C2002E6136 /* LNPropertyListEditorOutline.xib */; };
 		393E1875207F64A0002E6136 /* LNPropertyListEditor.h in Headers */ = {isa = PBXBuildFile; fileRef = 393E1873207F64A0002E6136 /* LNPropertyListEditor.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		393E1876207F64A0002E6136 /* LNPropertyListEditor.m in Sources */ = {isa = PBXBuildFile; fileRef = 393E1874207F64A0002E6136 /* LNPropertyListEditor.m */; };
 		393E1879207F68B4002E6136 /* LNPropertyListNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 393E1877207F68B4002E6136 /* LNPropertyListNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +34,7 @@
 		39DE8E9C2092214400ED16B4 /* LNPropertyListEditor-Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 39DE8E9B2092214300ED16B4 /* LNPropertyListEditor-Private.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		39F537F3264305AF00AB263A /* NSObject+LNPropertyListValueSorting.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F537F1264305AF00AB263A /* NSObject+LNPropertyListValueSorting.h */; };
 		39F537F4264305AF00AB263A /* NSObject+LNPropertyListValueSorting.m in Sources */ = {isa = PBXBuildFile; fileRef = 39F537F2264305AF00AB263A /* NSObject+LNPropertyListValueSorting.m */; };
+		CC13C7BB27EF790400D12892 /* LNPropertyListEditorOutline.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC13C7BD27EF790400D12892 /* LNPropertyListEditorOutline.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,6 @@
 		39259139263C52B100AF78D3 /* LNPropertyListCellTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNPropertyListCellTextField.m; sourceTree = "<group>"; };
 		393E1839207F6119002E6136 /* LNPropertyListEditor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LNPropertyListEditor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		393E183D207F6119002E6136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		393E1871207F61C2002E6136 /* LNPropertyListEditorOutline.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LNPropertyListEditorOutline.xib; sourceTree = "<group>"; };
 		393E1873207F64A0002E6136 /* LNPropertyListEditor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNPropertyListEditor.h; sourceTree = "<group>"; };
 		393E1874207F64A0002E6136 /* LNPropertyListEditor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LNPropertyListEditor.m; sourceTree = "<group>"; };
 		393E1877207F68B4002E6136 /* LNPropertyListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LNPropertyListNode.h; sourceTree = "<group>"; };
@@ -68,6 +67,9 @@
 		39DE8E9B2092214300ED16B4 /* LNPropertyListEditor-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LNPropertyListEditor-Private.h"; sourceTree = "<group>"; };
 		39F537F1264305AF00AB263A /* NSObject+LNPropertyListValueSorting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+LNPropertyListValueSorting.h"; sourceTree = "<group>"; };
 		39F537F2264305AF00AB263A /* NSObject+LNPropertyListValueSorting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+LNPropertyListValueSorting.m"; sourceTree = "<group>"; };
+		CC13C7C027EF797100D12892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LNPropertyListEditorOutline.xib; sourceTree = "<group>"; };
+		CC13C7C127EF797500D12892 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LNPropertyListEditorOutline.strings; sourceTree = "<group>"; };
+		CC13C7C227EF798600D12892 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LNPropertyListEditorOutline.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +129,7 @@
 				39D1528E23289668009124C8 /* LNPropertyListDatePickerPanel.m */,
 				39DE8E9B2092214300ED16B4 /* LNPropertyListEditor-Private.h */,
 				393E1874207F64A0002E6136 /* LNPropertyListEditor.m */,
-				393E1871207F61C2002E6136 /* LNPropertyListEditorOutline.xib */,
+				CC13C7BD27EF790400D12892 /* LNPropertyListEditorOutline.xib */,
 				393E1881207FAD26002E6136 /* LNPropertyListNode-Private.h */,
 				393E1878207F68B4002E6136 /* LNPropertyListNode.m */,
 				391FF0312084270400005D0F /* LNPropertyListOutlineView.h */,
@@ -215,6 +217,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 393E182F207F6119002E6136;
 			productRefGroup = 393E183A207F6119002E6136 /* Products */;
@@ -232,7 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				391FF02B2084060000005D0F /* Assets.xcassets in Resources */,
-				393E1872207F61C2002E6136 /* LNPropertyListEditorOutline.xib in Resources */,
+				CC13C7BB27EF790400D12892 /* LNPropertyListEditorOutline.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,11 +263,25 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		CC13C7BD27EF790400D12892 /* LNPropertyListEditorOutline.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC13C7C027EF797100D12892 /* Base */,
+				CC13C7C127EF797500D12892 /* en */,
+				CC13C7C227EF798600D12892 /* zh-Hans */,
+			);
+			name = LNPropertyListEditorOutline.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		393E183F207F6119002E6136 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -328,6 +345,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
