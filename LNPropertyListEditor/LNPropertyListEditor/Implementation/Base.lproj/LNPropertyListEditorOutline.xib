@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -289,20 +289,17 @@
         </scrollView>
         <menu id="vpK-HX-z6u">
             <items>
-                <menuItem title="Cut" id="fcg-eA-BaW">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Cut" keyEquivalent="x" id="fcg-eA-BaW">
                     <connections>
                         <action selector="cut:" target="-1" id="NeT-j6-dDT"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Copy" id="ZQz-3Y-y4A">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Copy" keyEquivalent="c" id="ZQz-3Y-y4A">
                     <connections>
                         <action selector="copy:" target="-1" id="HSw-p7-xKr"/>
                     </connections>
                 </menuItem>
-                <menuItem title="Paste" id="gUo-cr-EVu">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Paste" keyEquivalent="v" id="gUo-cr-EVu">
                     <connections>
                         <action selector="paste:" target="-1" id="I9U-hU-bNG"/>
                     </connections>
